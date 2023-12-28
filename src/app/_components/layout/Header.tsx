@@ -13,7 +13,7 @@ const Header = () => {
           <Image src="/Profile.svg" width={40} height={40} alt="Profile" />
         </div>
         <p className="mr-10">Your Nickname</p>
-        <button className="bg-orange-300 text-white px-4 py-2 rounded">
+        <button className="bg-orange-300 hover:bg-orange-400 text-white px-4 py-2 rounded">
           Logout
         </button>
       </div>

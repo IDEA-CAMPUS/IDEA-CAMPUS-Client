@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <div className="p-4 bg-white shadow-md w-64">
+    <div className="p-4 bg-white shadow-md w-64 min-h-screen">
       {sidebarData.map((item) => (
         <SidebarItemComponent key={item.id} item={item} />
       ))}

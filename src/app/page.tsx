@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Layout from "./_components/layout/Layout";
+import { Input } from "./_components/components/inputbox";
+import { TextButton } from "./_components/components/buttons";
 
 export default function Home() {
   return (

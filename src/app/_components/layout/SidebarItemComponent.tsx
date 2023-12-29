@@ -1,3 +1,5 @@
+'use-client'
+
 // 재귀적으로 사이드바 항목을 렌더링하는 컴포넌트
 import React, { useState } from "react";
 
@@ -5,6 +7,7 @@ type SidebarItem = {
   id: string;
   label: string;
   children?: SidebarItem[];
+  
 };
 
 const SidebarItemComponent: React.FC<{ item: SidebarItem }> = ({ item }) => {

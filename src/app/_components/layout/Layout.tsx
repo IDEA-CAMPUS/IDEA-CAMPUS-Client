@@ -10,7 +10,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <div className=" bg-manage_gray">
       <Header />
       <div className="flex">
         <Sidebar />

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import SidebarItemComponent from "./SidebarItemComponent";
+
+
 // 사이드바 항목 타입 정의
 type SidebarItem = {
   id: string;
   label: string;
   children?: SidebarItem[];
+  link?:string;
 };
 
 // 전체 사이드바 컴포넌트
@@ -18,18 +21,22 @@ const Sidebar: React.FC = () => {
         {
           id: "1.1",
           label: "홈화면 배너",
+          
         },
         {
           id: "1.2",
-          label: "프로젝트 관리 배너",
+          label: "프로젝트 관리 배너"
+
         },
         {
           id: "1.3",
-          label: "아디이어 존 관리 배너",
+          label: "아이디어 존 관리 배너",
+          link: ""
         },
         {
           id: "1.4",
           label: " 배너 등록",
+          link: "/banner/BannerRegistration",
         },
       ],
     },

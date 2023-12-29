@@ -35,7 +35,12 @@ export default function Home() {
               label="패스워드"
               className="mt-[24px]"
             />
-            <div className="flex flex-row items-center justify-center mt-[132px] mb-[241px]">
+            <NextButton
+              text="로그인"
+              className="mt-[64px] bg-blue-400"
+              onClick={() => setPage("returnID")}
+            ></NextButton>
+            <div className="flex flex-row items-center justify-center mt-[102px] mb-[168px]">
               <Image
                 src="/image/lock.png"
                 alt=""

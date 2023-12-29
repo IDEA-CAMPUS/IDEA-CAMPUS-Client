@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   // const [findID, setFindID] = useState(false);
-  const [page, setPage] = useState("returnPW");
+  const [page, setPage] = useState("");
 
   useEffect(() => {
     window.scrollTo();

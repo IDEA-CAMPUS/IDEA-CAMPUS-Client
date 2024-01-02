@@ -1,32 +1,29 @@
 "use client"
-// BannerRegistration.js
+
 import Layout from "../../_components/layout/Layout";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 
-
-const BannerRegistration = () => {
-  //Banner 등록 버튼 팝업이 뜨지 않는문제
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  //미리보기 이미지가 보이지 않는 상태
-  const [previewImage, setPreviewImage] = useState(null);
+const BannerRegistration: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
 
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPreviewImage(reader.result);
+        setPreviewImage(reader.result as string);
       };
       reader.readAsDataURL(file);
     }
   };
 
+  
   return (
     <Layout>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -76,7 +73,6 @@ const BannerRegistration = () => {
             </div>
           </div>
         </div>
-        {/* 배너 등록이 */}
         {isModalOpen && (
           <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
             <div className="bg-white p-8 rounded-md flex flex-col items-center">

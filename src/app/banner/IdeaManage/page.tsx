@@ -13,3 +13,4 @@ const IdeaManage = () => {
 };
 
 export default IdeaManage;
+

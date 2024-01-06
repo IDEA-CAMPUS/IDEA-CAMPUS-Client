@@ -1,4 +1,5 @@
 import { Interface } from "readline";
+import { AdminButton, BanButton } from "./button";
 
 interface User {
   name?: string;
@@ -6,6 +7,7 @@ interface User {
   email?: string;
   number?: number;
   registDate?: string;
+  ban: boolean;
 }
 
 export const UserCard = ({ User }: { User?: Interface }) => {
@@ -31,6 +33,11 @@ export const UserCard = ({ User }: { User?: Interface }) => {
         2024.1.19
         {/* User.registDate */}
       </div>
+
+      <BanButton ban={false} />
+      {/* <BanButton ban={User.ban} /> */}
+      <AdminButton admin={false} />
+      {/* <AdminButton admin={User.admin} /> */}
     </div>
   );
 };

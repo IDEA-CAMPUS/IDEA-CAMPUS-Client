@@ -20,7 +20,7 @@ export default function Home() {
         <div className="h-screen bg-white flex justify-center items-center">
           <div className="flex flex-col items-center box-border justify-evenly">
             <Image
-              src="/icon/logo.png"
+              src="/logo.svg"
               alt="logo"
               width={100}
               height={100}

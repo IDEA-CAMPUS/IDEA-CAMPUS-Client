@@ -8,6 +8,7 @@ interface User {
   number?: number;
   registDate?: string;
   ban: boolean;
+  admin: boolean;
 }
 
 export const UserCard = ({ User }: { User?: Interface }) => {

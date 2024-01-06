@@ -13,7 +13,7 @@ interface User {
 export const UserCard = ({ User }: { User?: Interface }) => {
   return (
     <div className="flex w-full h-[40px] items-center border border-x-0 border-y-gray-400">
-      <div className="min-w-[120px] text-[18px] flex items-center">
+      <div className="min-w-[120px] text-[18px] flex items-center ml-[5px]">
         김길동
         {/* User.name */}
       </div>
